@@ -23,4 +23,4 @@ This is the content of section 2.
 
 [Go to Section 1](#section-1)
 
-[Go to Section 2](section2.md)
+[Go to Section 2](Section2.md)
