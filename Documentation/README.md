@@ -1,8 +1,11 @@
 # Technical Document
+
 ## Introduction
+
 The purpose of this document is to record the philosophical and architectural concepts implemented in the project.
 
 ## Table of Contents
+
 - [Development Philosophy](development_philosophy.md)
   - [Empathetic Development](development_philosophy.md#empathetic-development)
   - [Reuseablity](development_philosophy.md#reuseability)
@@ -10,8 +13,8 @@ The purpose of this document is to record the philosophical and architectural co
   - [Communication](development_philosophy.md#communication)
   - [Documentation](development_philosophy.md#documentation)
   - [Use of AI](development_philosophy.md#use-of-ai)
-- [Architecture](#architecture)
- - [Project Structure](scriptable_objects.md)
+- Architecture
+  - [Project Structure](scriptable_objects.md)
     - [Scenes](scriptable_objects.md)
     - [Prefabs](scriptable_objects.md)
   - [Scriptable Objects](scriptable_objects.md)
