@@ -5,12 +5,12 @@ The purpose of this document is to describe how Scriptable Objects are being use
 ## Table of Contents
 
 - [Data Containers](#data-containers)
-- [Variables](scriptable_objects.md)
-- [Runtime Sets](scriptable_objects.md)
-- [Event System](scriptable_objects.md)
-  - [Events](scriptable_objects.md)
-  - [Event Listeners](scriptable_objects.md)
-- [Additional Resources](scriptable_objects.md)
+- [Variables](#variables)
+- [Runtime Sets](#runtime-sets)
+- [Event System](#event-system)
+  - [Events](#events)
+  - [Event Listeners](#event-listeners)
+- [Additional Resources](#additional-resources)
 
 ## Data Containers
 
