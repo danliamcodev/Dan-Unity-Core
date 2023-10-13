@@ -7,6 +7,7 @@ The purpose of this document is to establish standards when using version contro
 - [Scalability](#scalability)
 - [Communication](#communication)
 - [Documentation](#documentation)
+- [Use of Singletons](#use-of-singletons)
 - [Use of AI](#use-of-ai)
 
 
@@ -85,6 +86,9 @@ Effective documentation is crucial for maintaining clarity, consistency, and ali
 - **Troubleshooting:** Create a troubleshooting guide that addresses common technical issues or errors that team members may encounter during development.
 
 - **Version Control Practices:** Outline version control practices and guidelines for team members to follow when using version control systems like Git. This ensures smooth collaboration and code management.
+
+## Use of Singletons
+AI can be utilized in the development process to help create robust code and to help bugfix or troubleshoot any issues. On the topic of AI art, AI can be used to create reference images at most. AI must be avoided when creating any art that will make it in the final product as there is a chance that stolen art was used to create the AI art.
 
 ## Use of AI
 AI can be utilized in the development process to help create robust code and to help bugfix or troubleshoot any issues. On the topic of AI art, AI can be used to create reference images at most. AI must be avoided when creating any art that will make it in the final product as there is a chance that stolen art was used to create the AI art.

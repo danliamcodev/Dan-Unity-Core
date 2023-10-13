@@ -1,6 +1,6 @@
-# Dan's Development Philosophy and Architecture
+# Technical Document
 ## Introduction
-The purpose of this document is to create a record of the philosophical and architectural concepts I currently utilize. This is both to remind myself of the standards I want to adhere to and to brief the people I collaborate with on how I work.
+The purpose of this document is to record the philosophical and architectural concepts implemented in the project.
 
 ## Table of Contents
 - [Development Philosophy](development_philosophy.md)
@@ -11,20 +11,20 @@ The purpose of this document is to create a record of the philosophical and arch
   - [Documentation](development_philosophy.md#documentation)
   - [Use of AI](development_philosophy.md#use-of-ai)
 - [Architecture](#architecture)
+ - [Project Structure](scriptable_objects.md)
+    - [Scenes](scriptable_objects.md)
+    - [Prefabs](scriptable_objects.md)
   - [Scriptable Objects](scriptable_objects.md)
+    - [Data Containers](scriptable_objects.md)
     - [Variables](scriptable_objects.md)
     - [Runtime Sets](scriptable_objects.md)
     - [Event System](scriptable_objects.md)
     - [Additional Resources](scriptable_objects.md)
   - [Version Control](version_control.md)
-    - [Push and Pull Requests](#push-and-pull-requests)
-    - [Branching Standards](#branching-standards)
-    - [Commit Messages](#commit-messages)
-    - [Tags](#tags)
-    - [Conflict Resolution](#conflict-resolution)
-    - [Additional Resources](#additional-resources)
+    - [Pushing Changes](version_control.md#pushing-changes)
+    - [Branching](version_control.md#branching)
+    - [Commit Messages](version_control.md#commit-messages)
+    - [Tags](version_control.md#tags)
+    - [Conflict Resolution](version_control.md#conflict-resolution)
   - [Unit Testing](security.md)
   - [Security](security.md)
-  - [Tools Used](#section-1)
-    - [Sourcetree](#subsection-1)
-    - [Chat GPT](#subsection-1)

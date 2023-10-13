@@ -2,12 +2,7 @@
 The purpose of this document is to establish how version control will be used within the project.
 
 ## Table of Contents
-- [Setting Up](#setting-up)
-  - [Installation](#main-branch)
-  - [Account Creation](#main-branch)
-  - [User Verification](#main-branch)
-  - [Cloning](#main-branch)
-- [Push and Pull Requests](#push-and-pull-requests)
+- [Pushing Changes](#pushing-changes)
 - [Branching](#branching)
   - [Main Branch](#main-branch)
   - [Feature Branches](#feature-branches)
@@ -38,11 +33,9 @@ The purpose of this document is to establish how version control will be used wi
 - [Tags](#tags)
   - [Semantic Versioning](#semantic-versioning)
 - [Conflict Resolution](#conflict-resolution)
-- [Additional Resources](#additional-resources)
 
 
-## Pushing and Pulling 
-### Pushing ###
+## Pushing Changes 
 
 - **Use Descriptive Branch Names:** When creating a new branch for your feature or fix, give it a descriptive name that conveys its purpose. For example, "feature/user-authentication."
 
@@ -56,29 +49,9 @@ The purpose of this document is to establish how version control will be used wi
 
 - **Approval Workflow:** Developers should not merge their work directly into the main branch. Instead, they should create a pull request (PR) and assign it to the lead developer for review.
 
-- **Lead Developer Review:** The lead developer should review the code changes in the PR. This review can include checking code quality, adherence to coding standards, and alignment with the project's goals.
-
-### Pull Requests ###
-
-- **Use a Clear Title and Description:** When creating a pull request (PR), use a descriptive title that summarizes the change. In the PR description, provide context about what the change accomplishes and why it's necessary.
-
-- **Reviewers:** Assign one or more team members as reviewers for your PR. Choose individuals with relevant expertise who can provide constructive feedback.
-
-- **Continuous Integration (CI):** Set up automated CI/CD pipelines to run tests and checks on the PR. Ensure that all tests pass and coding standards are met.
-
-- **Discussion and Collaboration:** Engage in discussions with reviewers to address questions, concerns, and feedback. Be open to suggestions and improvements.
-
-- **Revisions:** Make necessary revisions to your branch and PR based on the feedback you receive. Keep the PR up-to-date with the main branch.
+- **Use a Clear Title and Description:** When creating a PR, use a descriptive title that summarizes the change. In the PR description, provide context about what the change accomplishes and why it's necessary.
 
 - **Approval:** Once reviewers are satisfied with the changes, they can approve the PR. Some projects may require multiple approvals before merging.
-
-- **Merging:** After approval, the PR can be merged into the main branch. Ensure that your branch is up-to-date with the main branch to minimize merge conflicts.
-
-- **Delete Branch:** After the PR is merged, delete the feature or fix branch if it's no longer needed. This keeps the repository clean.
-
-- **Release Notes:** If applicable, update release notes or project documentation to reflect the changes introduced by the merged PR.
-
-- **Follow Project Guidelines:** Adhere to any project-specific guidelines and workflows for creating and managing PRs.
 
 ## Branching
 
@@ -159,7 +132,7 @@ The primary development branch where the stable and production-ready code reside
 
 ---
 
-### UI/UX Branches
+### UI UX Branches
  - For improvements related to user interface (UI) and user experience (UX), such as redesigning menus or improving user interactions, dedicated branches can be created.
 
  **Naming Convention:**
@@ -319,22 +292,6 @@ Conflict resolution is the process of handling discrepancies and conflicts that 
 
 - **Pull and Fetch**: Regularly pull and fetch changes from the main branch to stay up to date with the latest code. This reduces the chances of conflicts by ensuring you're working with the most recent codebase.
 
-- **Automated Testing**: Implement automated testing as part of the continuous integration process. Automated tests help identify conflicts early and ensure that code changes do not break existing functionality.
-
-- **Code Reviews**: Establish a code review process where team members review each other's code. Code reviews can detect potential conflicts or improvements and provide early feedback.
-
-- **Clear Documentation**: Maintain clear and up-to-date documentation of coding standards, naming conventions, and branching strategies. This reduces conflicts related to coding style and approach.
-
 - **Conflict Resolution Tools**: Familiarize the team with the conflict resolution tools provided by your version control system (e.g., Git). Developers should know how to resolve merge conflicts and utilize these tools effectively.
 
 - **Conflict Resolution Policy**: Develop and communicate a conflict resolution policy within the team. Outline the steps to take when conflicts arise and the responsible parties for resolving them.
-
-- **Mediation**: In cases where conflicts persist and cannot be resolved by team members directly involved, designate a mediator or team lead to facilitate the resolution process.
-
-- **Retrospectives**: Conduct regular retrospectives to reflect on past conflicts and identify strategies for prevention and improvement. Learning from previous conflicts can help avoid similar issues in the future.
-
-- **Communication and Collaboration**: Emphasize open communication and collaboration within the team. Encourage team members to work together to resolve conflicts and focus on finding solutions.
-
-- **Conflict Resolution Training**: Invest in training and education for team members to enhance their conflict resolution skills. Effective conflict resolution is a valuable skill in any collaborative environment.
-
-## Additional Resources
