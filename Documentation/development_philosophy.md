@@ -338,7 +338,7 @@ Scalability is about designing your game in a way that allows it to grow and ada
 
 ## Editability
 
-Editability is about designing your Unity project in a way where gameplay is easily editable in the Editor. This makes it so that new code does not necessarily need to be made to come up with new behaviors. This allows game designers to experiment and come up with new and interesting game mechanics more easily. This also reduces the amount of code needed, resulting in less bugs as well.
+Editability is about designing your Unity project in a way where gameplay is easily editable in the Editor. This makes it so that new code does not necessarily need to be made to come up with new behaviors. This creates a fluid system that allows game designers to experiment and come up with new and interesting game mechanics more easily. This also reduces the amount of code needed, resulting in less bugs as well.
 
 - **Inspector Customization:** Use the Unity Editor's custom inspector features to make your components more user-friendly. You can add tooltips, context menus, and reorderable lists to make it easier for designers to interact with your components.
 
