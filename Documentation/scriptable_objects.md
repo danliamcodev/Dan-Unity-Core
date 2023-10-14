@@ -20,7 +20,6 @@ Scriptable Objects can be used as data containers. They are a convenient way to 
 
 Scriptable Objects variables are small scriptable objects that only hold one variable. This allows variables to be modular and easily accessible by different components.
 
-
  Base Variable Class:
 
 ```csharp
