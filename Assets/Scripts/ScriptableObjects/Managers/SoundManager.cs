@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "Sound Manager", menuName = "Components/Sound Manager")]
+[CreateAssetMenu(fileName = "Sound Manager", menuName = "Managers/Sound Manager")]
 public class SoundManager : ScriptableObject
 {
     [Header("Audio Clips")]
