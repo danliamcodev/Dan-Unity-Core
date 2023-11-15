@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-[CreateAssetMenu(fileName = "Level Manager", menuName = "Components/Level Manager")]
+[CreateAssetMenu(fileName = "Level Manager", menuName = "Managers/Level Manager")]
 public class LevelManager : ScriptableObject
 {
     [Header("Events")]
