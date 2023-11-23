@@ -15,7 +15,11 @@ public abstract class BaseGameEvent<Type> : ScriptableObject
     public void Raise(Type p_parameter)
     {
         for (int i = _eventListeners.Count - 1; i >= 0; i--)
-            _eventListeners[i].OnEventRaised(p_parameter);
+        {
+            //_eventListeners[i].OnEventRaised(p_parameter);
+            _eventListeners[i].OnEventRaised(p_parameter, this);
+        }
+   
     }
 
     public void RegisterListener(IGameEventListener<Type> p_listener)
@@ -33,6 +37,8 @@ public abstract class BaseGameEvent<Type> : ScriptableObject
 
 public interface IGameEventListener<Type>
 {
-    void OnEventRaised(Type p_parameter);
+    //void OnEventRaised(Type p_parameter);
+
+    void OnEventRaised(Type p_parameter, BaseGameEvent<Type> p_baseGameEvent);
 }
 
