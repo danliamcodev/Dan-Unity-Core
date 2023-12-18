@@ -19,6 +19,20 @@ public class SoundManager : ScriptableObject
     [Header("Components")]
     [SerializeField] GameObject _audioSource;
     AudioSource _sfxSource, _bgmSource, _voSource;
+    Coroutine _bgmFadeOutTask;
+
+    public float bgmProgress
+    {
+        get
+        {
+            float progress = 0;
+            if (_bgmSource != null)
+            {
+                progress = _bgmSource.time / _bgmSource.clip.length;
+            }
+            return progress;
+        }
+    }
 
     public void PlaySFX(AudioClip p_audioClip)
     {
@@ -28,7 +42,8 @@ public class SoundManager : ScriptableObject
         if (!_masterToggle.value || !_sfxToggle.value)
         {
             volume = 0f;
-        } else
+        }
+        else
         {
             volume = _masterVolume.value * _sfxVolume.value;
         }
@@ -42,7 +57,18 @@ public class SoundManager : ScriptableObject
 
         if (!p_fresh)
         {
-            if (_bgmSource.clip == p_audioClip) return;
+            if (_bgmSource.clip == p_audioClip)
+            {
+                if (_bgmSource.isPlaying)
+                {
+                    return;
+                }
+                else
+                {
+                    _bgmSource.UnPause();
+                    return;
+                }
+            }
         }
 
         float volume;
@@ -119,6 +145,31 @@ public class SoundManager : ScriptableObject
         }
 
         _voSource.volume = volume;
+    }
+
+    public void PauseBGM()
+    {
+        _bgmSource.Pause();
+    }
+
+    public void FadeOutBGM(float p_duration)
+    {
+        if (_bgmFadeOutTask != null) return;
+        _bgmFadeOutTask = _bgmSource.GetComponent<AudioSourceObject>().StartCoroutine(FadeOutBGMTask(p_duration));
+    }
+
+    private IEnumerator FadeOutBGMTask(float p_duration)
+    {
+        float timer = 0f;
+        float startingVolume = _bgmSource.volume;
+        while (timer < p_duration)
+        {
+            timer += Time.deltaTime;
+            float newVolume = Mathf.Lerp(startingVolume, 0f, timer / p_duration);
+            _bgmSource.volume = newVolume;
+            yield return null;
+        }
+        _bgmFadeOutTask = null;
     }
 
     public void StopBGM()
