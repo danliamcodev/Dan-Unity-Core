@@ -1,7 +1,7 @@
 using UnityEditor;
 using UnityEngine;
 
-[CustomEditor(typeof(StateMachine))]
+[CustomEditor(typeof(GlobalStateMachine))]
 public class StateMachineEditor : Editor
 {
     public override void OnInspectorGUI()
@@ -10,7 +10,7 @@ public class StateMachineEditor : Editor
 
         GUI.enabled = Application.isPlaying;
 
-        StateMachine gameEvent = target as StateMachine;
+        GlobalStateMachine gameEvent = target as GlobalStateMachine;
         if (GUILayout.Button("Set State"))
             gameEvent.SetState(gameEvent.testState);
     }
