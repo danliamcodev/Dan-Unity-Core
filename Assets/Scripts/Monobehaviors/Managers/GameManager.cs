@@ -4,15 +4,13 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [Header("References")]
+    [SerializeField] GlobalStateMachine _gameStateMachine;
+    [Header("States")]
+    [SerializeField] GlobalState _gameRunning;
 
-    // Update is called once per frame
-    void Update()
+    private void Awake()
     {
-        
+        _gameStateMachine.ClearState();
     }
 }
