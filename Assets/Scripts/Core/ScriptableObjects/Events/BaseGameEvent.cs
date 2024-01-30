@@ -1,11 +1,13 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
+using System.Diagnostics;
 
 namespace YourProject.Core.Events
 {
     public abstract class BaseGameEvent<Type> : ScriptableObject
     {
         [SerializeField] Type _testValue;
+        [SerializeField] bool _showDebugStack = false;
         /// <summary>
         /// The list of listeners that this event will notify if it is raised.
         /// </summary>
@@ -21,6 +23,10 @@ namespace YourProject.Core.Events
                 _eventListeners[i].OnEventRaised(p_parameter, this);
             }
 
+            if (_showDebugStack)
+            {
+                LogStackTrace();
+            }
         }
 
         public void RegisterListener(IGameEventListener<Type> p_listener)
@@ -33,6 +39,22 @@ namespace YourProject.Core.Events
         {
             if (_eventListeners.Contains(p_listener))
                 _eventListeners.Remove(p_listener);
+        }
+
+        void LogStackTrace()
+        {
+            StackTrace stackTrace = new StackTrace();
+            for (int i = 0; i < stackTrace.FrameCount; i++)
+            {
+                StackFrame frame = stackTrace.GetFrame(i);
+                if (frame != null)
+                {
+                    string methodName = frame.GetMethod().Name;
+                    string className = frame.GetMethod().DeclaringType.Name;
+                    string message = $"Method: {methodName}, Class: {className}";
+                    UnityEngine.Debug.Log(message);
+                }
+            }
         }
     }
 
