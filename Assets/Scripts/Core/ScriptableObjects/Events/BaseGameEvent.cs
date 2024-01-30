@@ -44,14 +44,15 @@ namespace YourProject.Core.Events
         void LogStackTrace()
         {
             StackTrace stackTrace = new StackTrace();
-            for (int i = 0; i < stackTrace.FrameCount; i++)
+            for (int i = 1; i < stackTrace.FrameCount; i++)
             {
                 StackFrame frame = stackTrace.GetFrame(i);
                 if (frame != null)
                 {
+                    string eventName = this.name;
                     string methodName = frame.GetMethod().Name;
                     string className = frame.GetMethod().DeclaringType.Name;
-                    string message = $"Method: {methodName}, Class: {className}";
+                    string message = $"Event: {eventName}, Method: {methodName}, Class: {className}";
                     UnityEngine.Debug.Log(message);
                 }
             }
