@@ -17,15 +17,16 @@ namespace YourCompany.Events
 
         public void Raise(Type p_parameter)
         {
+            if (_showDebugStack)
+            {
+                DisplayListeners();
+                LogStackTrace();
+            }
+
             for (int i = _eventListeners.Count - 1; i >= 0; i--)
             {
                 //_eventListeners[i].OnEventRaised(p_parameter);
                 _eventListeners[i].OnEventRaised(p_parameter, this);
-            }
-
-            if (_showDebugStack)
-            {
-                LogStackTrace();
             }
         }
 
@@ -39,6 +40,14 @@ namespace YourCompany.Events
         {
             if (_eventListeners.Contains(p_listener))
                 _eventListeners.Remove(p_listener);
+        }
+
+        void DisplayListeners()
+        {
+            for (int i = 0; i < _eventListeners.Count; i++)
+            {
+                UnityEngine.Debug.Log(string.Format("{0} is listening", _eventListeners[i].ToString()));
+            }
         }
 
         void LogStackTrace()
