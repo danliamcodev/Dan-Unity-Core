@@ -1,0 +1,18 @@
+{
+    "name": "YourCompany.Managers",
+    "rootNamespace": "",
+    "references": [
+        "GUID:bc53a5275dbdc9248993c5b795570750",
+        "GUID:9131c40fbccf52841aaddf86a8309a17",
+        "GUID:f7b5141df3a50404dbe1e56c97b08380"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

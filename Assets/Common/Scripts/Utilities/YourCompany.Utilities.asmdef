@@ -1,0 +1,17 @@
+{
+    "name": "YourCompany.Utilities",
+    "rootNamespace": "",
+    "references": [
+        "GUID:3b4207326d5591c448141e7d19ca4fcf",
+        "GUID:6e98b20208201194f803932cf504e72e"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
