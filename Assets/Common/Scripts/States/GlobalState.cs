@@ -14,7 +14,10 @@ namespace YourCompany.States
 
         public void EnterState()
         {
-            DisplayListeners("entering");
+            if (_showDebugStack)
+            {
+                DisplayListeners("entering");
+            }
             for (int i = _stateListeners.Count - 1; i >= 0; i--)
             {
                 _stateListeners[i].OnStateEntered(this);
@@ -23,7 +26,10 @@ namespace YourCompany.States
 
         public void ExitState()
         {
-            DisplayListeners("exiting");
+            if (_showDebugStack)
+            {
+                DisplayListeners("exiting");
+            }
             for (int i = _stateListeners.Count - 1; i >= 0; i--)
             {
                 _stateListeners[i].OnStateExited(this);
