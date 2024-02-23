@@ -37,6 +37,12 @@ namespace YourCompany.Managers
             }
         }
 
+        void OnEnable()
+        {
+            // Set the HideFlags to prevent unloading
+            this.hideFlags = HideFlags.DontUnloadUnusedAsset;
+        }
+
         public void PlaySFX(AudioClip p_audioClip)
         {
             float volume;
