@@ -1,3 +1,4 @@
+/*
 using UnityEngine;
 using UnityEngine.Events;
 using YourCompany.Events;
@@ -16,3 +17,4 @@ namespace YourCompany.Utilities.EventScripts
 
     }
 }
+*/
