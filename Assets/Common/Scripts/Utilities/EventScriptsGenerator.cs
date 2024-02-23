@@ -35,6 +35,8 @@ namespace YourCompany.Utilities.EventScripts
             string scriptName = $"{_eventType}Event";
             string scriptText = _eventsTemplate.text;
 
+            scriptText = (RemoveCommentTokens(scriptText));
+
             // Replace the placeholders with the actual event type
             scriptText = scriptText.Replace("TemplateVariable", _eventType);
 
@@ -50,6 +52,8 @@ namespace YourCompany.Utilities.EventScripts
 #if UNITY_EDITOR
             string scriptName = $"{_eventType}EventEditor";
             string scriptText = _eventEditorsTemplate.text;
+
+            scriptText = (RemoveCommentTokens(scriptText));
 
             // Replace the placeholders with the actual event type
             scriptText = scriptText.Replace("TemplateVariable", _eventType);
@@ -67,6 +71,8 @@ namespace YourCompany.Utilities.EventScripts
             string scriptName = $"{_eventType}EventListener";
             string scriptText = _eventListenersTemplate.text;
 
+            scriptText = (RemoveCommentTokens(scriptText));
+
             // Replace the placeholders with the actual event type
             scriptText = scriptText.Replace("TemplateVariable", _eventType);
 
@@ -75,6 +81,17 @@ namespace YourCompany.Utilities.EventScripts
 
             File.WriteAllText(scriptPath, scriptText);
 #endif
+        }
+
+        private string RemoveCommentTokens(string p_string)
+        {
+            string modifiedString = "";
+            // Check if the original string has at least 4 characters
+            if (p_string.Length >= 4)
+            {
+                modifiedString = p_string.Substring(2, p_string.Length - 4);
+            }
+            return modifiedString;
         }
     }
 }
