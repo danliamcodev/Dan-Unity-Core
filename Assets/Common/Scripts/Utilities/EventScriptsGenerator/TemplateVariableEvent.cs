@@ -1,9 +1,8 @@
 /*
 using UnityEngine;
 using UnityEngine.Events;
-using YourCompany.Events;
 
-namespace YourCompany.Utilities.EventScripts
+namespace YourCompany.Events
 {
     [CreateAssetMenu(fileName = "New TemplateVariable Event", menuName = "Events/TemplateVariable Event")]
     public class TemplateVariableEvent : BaseGameEvent<TemplateVariable>

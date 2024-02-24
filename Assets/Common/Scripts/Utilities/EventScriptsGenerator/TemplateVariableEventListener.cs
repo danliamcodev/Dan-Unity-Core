@@ -1,8 +1,7 @@
 /*
 using UnityEngine;
-using YourCompany.Events;
 
-namespace YourCompany.Utilities.EventScripts
+namespace YourCompany.Events
 {
     public class TemplateVariableEventListener : BaseGameEventListener<TemplateVariable, TemplateVariableEvent, TemplateVariableUnityEvent>
     {
