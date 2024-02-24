@@ -16,4 +16,9 @@ namespace YourCompany.Variables
         }
     }
 
+    [System.Serializable]
+    public class IntReference : BaseReference<int, IntVariable>
+    {
+
+    }
 }

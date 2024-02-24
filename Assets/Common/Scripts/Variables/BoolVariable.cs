@@ -7,4 +7,10 @@ namespace YourCompany.Variables
     {
 
     }
+
+    [System.Serializable]
+    public class BoolReference : BaseReference<bool, BoolVariable>
+    {
+
+    }
 }
