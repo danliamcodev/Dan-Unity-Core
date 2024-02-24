@@ -1,9 +1,8 @@
 /*
 using UnityEngine;
 using UnityEditor;
-using YourCompany.Events;
 
-namespace YourCompany.Utilities.EventScripts
+namespace YourCompany.Events
 {
     [CustomEditor(typeof(TemplateVariableEvent))]
     public class TemplateVariableEventEditor : BaseEventEditor<TemplateVariable, TemplateVariableEvent>
