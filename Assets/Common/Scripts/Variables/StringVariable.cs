@@ -11,6 +11,13 @@ namespace YourCompany.Variables
     [System.Serializable]
     public class StringReference : BaseReference<string, StringVariable>
     {
+        public StringReference(string value) : base(value)
+        {
+        }
 
+        public static implicit operator StringReference(string value)
+        {
+            return new StringReference(value);
+        }
     }
 }

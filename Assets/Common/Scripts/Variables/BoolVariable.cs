@@ -11,6 +11,13 @@ namespace YourCompany.Variables
     [System.Serializable]
     public class BoolReference : BaseReference<bool, BoolVariable>
     {
+        public BoolReference(bool value) : base(value)
+        {
+        }
 
+        public static implicit operator BoolReference(bool value)
+        {
+            return new BoolReference(value);
+        }
     }
 }
