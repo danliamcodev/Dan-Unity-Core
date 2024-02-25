@@ -19,7 +19,13 @@ namespace YourCompany.Variables
     [System.Serializable]
     public class FloatReference: BaseReference<float, FloatVariable>
     {
+        public FloatReference(float value) : base(value)
+        {
+        }
 
+        public static implicit operator FloatReference(float value)
+        {
+            return new FloatReference(value);
+        }
     }
-
 }

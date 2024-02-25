@@ -19,6 +19,13 @@ namespace YourCompany.Variables
     [System.Serializable]
     public class IntReference : BaseReference<int, IntVariable>
     {
+        public IntReference(int value) : base(value)
+        {
+        }
 
+        public static implicit operator IntReference(int value)
+        {
+            return new IntReference(value);
+        }
     }
 }
