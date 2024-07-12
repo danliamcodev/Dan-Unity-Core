@@ -8,11 +8,12 @@ namespace YourCompany.Variables
         public void ApplyChange(float p_amount)
         {
             _value += p_amount;
+            ValueUpdated?.Invoke();
         }
 
         public void ApplyChange(FloatVariable p_amount)
         {
-            _value += p_amount.value;
+            ApplyChange(p_amount.value);
         }
     }
 

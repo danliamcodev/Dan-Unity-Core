@@ -6,16 +6,19 @@ namespace YourCompany.Variables
     {
         [SerializeField] protected T _value;
 
+        public System.Action ValueUpdated;
+
         public T value { get { return _value; } }
 
         public void SetValue(T p_value)
         {
             _value = p_value;
+            ValueUpdated?.Invoke();
         }
 
         public void SetValue(BaseVariable<T> p_value)
         {
-            _value = p_value.value;
+            SetValue(p_value.value);
         }
     }
 
