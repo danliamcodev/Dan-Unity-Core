@@ -3,51 +3,38 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-namespace YourCompany.States
+namespace SickLab.States
 {
     public class LocalStateListener : MonoBehaviour
     {
         [Header("References")]
         [SerializeField] LocalStateMachine _stateMachine;
         [Header("Parameters")]
-        [SerializeField] List<LocalStateResponses> _stateResponses;
-        Dictionary<LocalState, UnityEvent> _onStateEnteredResponses = new Dictionary<LocalState, UnityEvent>();
-        Dictionary<LocalState, UnityEvent> _onStateExitedResponses = new Dictionary<LocalState, UnityEvent>();
-
-        private void Awake()
-        {
-            foreach (LocalStateResponses stateResponses in _stateResponses)
-            {
-                _onStateEnteredResponses.Add(stateResponses.state, stateResponses.onStateEnteredResponse);
-                _onStateExitedResponses.Add(stateResponses.state, stateResponses.onStateExitedResponse);
-            }
-        }
+        [SerializeField] LocalStateResponses _stateResponses;
 
         private void OnEnable()
         {
-            foreach (LocalStateResponses stateResponses in _stateResponses)
-            {
-                _stateMachine.RegisterListener(stateResponses.state, this);
-            }
+            _stateMachine.RegisterListener(_stateResponses.state, this);
         }
 
         private void OnDisable()
         {
-            foreach (LocalStateResponses stateResponses in _stateResponses)
-            {
-                _stateMachine.UnregisterListener(stateResponses.state, this);
-            }
+            _stateMachine.UnregisterListener(_stateResponses.state, this);
         }
 
-        public void OnStateEntered(LocalState p_state)
+        public void OnStateEntered()
         {
-            _onStateEnteredResponses[p_state].Invoke();
+            _stateResponses.onStateEnteredResponse.Invoke();
         }
 
-
-        public void OnStateExited(LocalState p_state)
+        public void OnStateSet()
         {
-            _onStateExitedResponses[p_state].Invoke();
+            _stateResponses.onStateSetResponse.Invoke();
+        }
+
+        public void OnStateExited()
+        {
+            _stateResponses.onStateExitedResponse.Invoke();
         }
     }
 }

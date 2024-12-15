@@ -1,9 +1,9 @@
 
 using UnityEngine;
 
-namespace YourCompany.Variables
+namespace SickLab.Variables
 {
-    [CreateAssetMenu(fileName = "GameObject Variable", menuName = "Variables/GameObject Variable")]
+    [CreateAssetMenu(fileName = "GameObjectVariable", menuName = "Sick Lab/Variables/GameObject Variable")]
     public class GameObjectVariable : BaseVariable<GameObject>
     {
     }

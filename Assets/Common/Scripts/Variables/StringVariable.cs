@@ -1,8 +1,8 @@
 ﻿using UnityEngine;
 
-namespace YourCompany.Variables
+namespace SickLab.Variables
 {
-    [CreateAssetMenu(fileName = "String Variable", menuName = "Variables/String Variable")]
+    [CreateAssetMenu(fileName = "StringVariable", menuName = "Sick Lab/Variables/String Variable")]
     public class StringVariable : BaseVariable<string>
     {
 

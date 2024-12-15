@@ -1,8 +1,8 @@
 ﻿using UnityEngine;
 
-namespace YourCompany.Variables
+namespace SickLab.Variables
 {
-    [CreateAssetMenu(fileName = "New Bool Variable", menuName = "Variables/Bool Variable")]
+    [CreateAssetMenu(fileName = "BoolVariable", menuName = "Sick Lab/Variables/Bool Variable")]
     public class BoolVariable : BaseVariable<bool>
     {
 

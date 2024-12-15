@@ -1,9 +1,9 @@
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
-using YourCompany.Variables;
+using SickLab.Variables;
 
-namespace YourCompany.UI.Elements
+namespace SickLab.UI.Elements
 {
     public class ToggleButton : MonoBehaviour
     {

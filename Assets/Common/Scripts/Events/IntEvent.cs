@@ -1,9 +1,9 @@
 ﻿using UnityEngine;
 using UnityEngine.Events;
 
-namespace YourCompany.Events
+namespace SickLab.Events
 {
-    [CreateAssetMenu(fileName = "New Int Event", menuName = "Events/Int Event")]
+    [CreateAssetMenu(fileName = "IntEvent", menuName = "Sick Lab/Events/Int Event")]
     public class IntEvent : BaseGameEvent<int>
     {
 

@@ -38,7 +38,6 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -361,6 +360,7 @@ GameObject:
   - component: {fileID: 701452781}
   - component: {fileID: 701452780}
   - component: {fileID: 701452779}
+  - component: {fileID: 701452782}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -444,6 +444,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 701452782}
+        m_TargetAssemblyTypeName: SickLab.Audio.SfxPlayer, Assembly-CSharp
+        m_MethodName: PlaySFX
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &701452780
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -482,6 +494,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 701452777}
   m_CullTransparentMesh: 1
+--- !u!114 &701452782
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 701452777}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c0d54305ff03aa47b9cfcf063415a7a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _audioClipData: {fileID: 11400000, guid: 3d0ae4559b47d174f922805393c54457, type: 2}
 --- !u!1 &958152327
 GameObject:
   m_ObjectHideFlags: 0

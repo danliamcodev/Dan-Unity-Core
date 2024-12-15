@@ -1,8 +1,8 @@
 
 using UnityEngine;
-using YourCompany.Events;
+using SickLab.Events;
 
-namespace YourCompany.Utilities.EventScripts
+namespace SickLab.Utilities.EventScripts
 {
     public class BoolEventListener : BaseGameEventListener<bool, BoolEvent, BoolUnityEvent>
     {

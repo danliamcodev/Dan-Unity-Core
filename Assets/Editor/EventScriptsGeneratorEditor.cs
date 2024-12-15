@@ -1,7 +1,7 @@
 using UnityEditor;
 using UnityEngine;
 
-namespace YourCompany.Utilities.EventScripts
+namespace SickLab.Utilities.EventScripts
 {
     [CustomEditor(typeof(EventScriptsGenerator))]
     public class EventScriptsGeneratorEditor : Editor

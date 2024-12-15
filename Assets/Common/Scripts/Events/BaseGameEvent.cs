@@ -2,7 +2,7 @@
 using UnityEngine;
 using System.Diagnostics;
 
-namespace YourCompany.Events
+namespace SickLab.Events
 {
     public abstract class BaseGameEvent<Type> : ScriptableObject
     {
@@ -25,8 +25,7 @@ namespace YourCompany.Events
 
             for (int i = _eventListeners.Count - 1; i >= 0; i--)
             {
-                //_eventListeners[i].OnEventRaised(p_parameter);
-                _eventListeners[i].OnEventRaised(p_parameter, this);
+                _eventListeners[i].OnEventRaised(p_parameter);
             }
         }
 
@@ -70,8 +69,6 @@ namespace YourCompany.Events
 
     public interface IGameEventListener<Type>
     {
-        //void OnEventRaised(Type p_parameter);
-
-        void OnEventRaised(Type p_parameter, BaseGameEvent<Type> p_baseGameEvent);
+        void OnEventRaised(Type p_parameter);
     }
 }

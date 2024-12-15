@@ -1,11 +1,11 @@
 
 using UnityEngine;
 using UnityEngine.Events;
-using YourCompany.Events;
+using SickLab.Events;
 
-namespace YourCompany.Utilities.EventScripts
+namespace SickLab.Utilities.EventScripts
 {
-    [CreateAssetMenu(fileName = "New GameObject Event", menuName = "Events/GameObject Event")]
+    [CreateAssetMenu(fileName = "GameObjectEvent", menuName = "Sick Lab/Events/GameObject Event")]
     public class GameObjectEvent : BaseGameEvent<GameObject>
     {
 

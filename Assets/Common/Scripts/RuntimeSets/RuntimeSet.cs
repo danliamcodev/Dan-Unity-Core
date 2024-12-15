@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 
-namespace YourCompany.RuntimeSets
+namespace SickLab.RuntimeSets
 {
     public abstract class RuntimeSet<T> : ScriptableObject
     {

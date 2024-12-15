@@ -1,7 +1,7 @@
 using UnityEditor;
 using UnityEngine;
 
-namespace YourCompany.Utilities.VariableReferenceScripts
+namespace SickLab.Utilities.VariableReferenceScripts
 {
     [CustomEditor(typeof(VarRefScriptsGenerator))]
     public class VarRefScriptsGeneratorEditor : Editor

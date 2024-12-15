@@ -1,9 +1,9 @@
 
 using UnityEngine;
 using UnityEditor;
-using YourCompany.Events;
+using SickLab.Events;
 
-namespace YourCompany.Utilities.EventScripts
+namespace SickLab.Utilities.EventScripts
 {
     [CustomEditor(typeof(GameObjectEvent))]
     public class GameObjectEventEditor : BaseEventEditor<GameObject, GameObjectEvent>

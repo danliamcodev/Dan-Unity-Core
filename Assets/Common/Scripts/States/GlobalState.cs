@@ -2,9 +2,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-namespace YourCompany.States
+namespace SickLab.States
 {
-    [CreateAssetMenu(fileName = "State", menuName = "States/Global State")]
+    [CreateAssetMenu(fileName = "GlobalState", menuName = "Sick Lab/States/Global State")]
     public class GlobalState : ScriptableObject
     {
         [Header("Parametesr")]
@@ -18,9 +18,24 @@ namespace YourCompany.States
             {
                 DisplayListeners("entering");
             }
+
             for (int i = _stateListeners.Count - 1; i >= 0; i--)
             {
-                _stateListeners[i].OnStateEntered(this);
+                _stateListeners[i].OnStateEntered();
+            }
+
+        }
+
+        public void SetState()
+        {
+            if (_showDebugStack)
+            {
+                DisplayListeners("setting");
+            }
+
+            for (int i = _stateListeners.Count - 1; i >= 0; i--)
+            {
+                _stateListeners[i].OnStateSet();
             }
         }
 
@@ -32,7 +47,7 @@ namespace YourCompany.States
             }
             for (int i = _stateListeners.Count - 1; i >= 0; i--)
             {
-                _stateListeners[i].OnStateExited(this);
+                _stateListeners[i].OnStateExited();
             }
         }
 
@@ -66,11 +81,15 @@ namespace YourCompany.States
         [Tooltip("Response to invoke when State is entered.")]
         [SerializeField] UnityEvent _onStateEnteredResponse;
 
+        [Tooltip("Response to invoke when State is set.")]
+        [SerializeField] UnityEvent _onStateSetResponse;
+
         [Tooltip("Response to invoke when State is exited.")]
         [SerializeField] UnityEvent _onStateExitedResponse;
 
         public GlobalState state => _state;
         public UnityEvent onStateEnteredResponse => _onStateEnteredResponse;
+        public UnityEvent onStateSetResponse => _onStateSetResponse;
         public UnityEvent onStateExitedResponse => _onStateExitedResponse;
     }
 }

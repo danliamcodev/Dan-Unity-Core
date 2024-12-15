@@ -1,11 +1,11 @@
 
 using UnityEngine;
 using UnityEngine.Events;
-using YourCompany.Events;
+using SickLab.Events;
 
-namespace YourCompany.Utilities.EventScripts
+namespace SickLab.Utilities.EventScripts
 {
-    [CreateAssetMenu(fileName = "New bool Event", menuName = "Events/bool Event")]
+    [CreateAssetMenu(fileName = "BoolEvent", menuName = "Sick Lab/Events/bool Event")]
     public class BoolEvent : BaseGameEvent<bool>
     {
 

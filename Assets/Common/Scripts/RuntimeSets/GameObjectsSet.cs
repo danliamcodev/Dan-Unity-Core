@@ -1,8 +1,8 @@
 ﻿using UnityEngine;
 
-namespace YourCompany.RuntimeSets
+namespace SickLab.RuntimeSets
 {
-    [CreateAssetMenu(fileName = "Game Objects Set", menuName = "Runtime Sets/Game Objects Set")]
+    [CreateAssetMenu(fileName = "GameObjectsSet", menuName = "Sick Lab/Runtime Sets/Game Objects Set")]
     public class GameObjectsSet : RuntimeSet<GameObject>
     {
 

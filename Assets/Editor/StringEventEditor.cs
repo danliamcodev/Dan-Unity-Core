@@ -1,6 +1,6 @@
 ﻿using UnityEditor;
 
-namespace YourCompany.Events
+namespace SickLab.Events
 {
     [CustomEditor(typeof(StringEvent))]
     public class StringEventEditor : BaseEventEditor<string, StringEvent>

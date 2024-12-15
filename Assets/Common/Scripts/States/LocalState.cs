@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-namespace YourCompany.States
+namespace SickLab.States
 {
-    [CreateAssetMenu(fileName = "State", menuName = "States/Local State")]
+    [CreateAssetMenu(fileName = "LocalState", menuName = "Sick Lab/States/Local State")]
     public class LocalState : ScriptableObject
     {
 
@@ -20,11 +20,15 @@ namespace YourCompany.States
         [Tooltip("Response to invoke when State is entered.")]
         [SerializeField] UnityEvent _onStateEnteredResponse;
 
+        [Tooltip("Response to invoke when State is set.")]
+        [SerializeField] UnityEvent _onStateSetResponse;
+
         [Tooltip("Response to invoke when State is exited.")]
         [SerializeField] UnityEvent _onStateExitedResponse;
 
         public LocalState state => _state;
         public UnityEvent onStateEnteredResponse => _onStateEnteredResponse;
+        public UnityEvent onStateSetResponse => _onStateSetResponse;
         public UnityEvent onStateExitedResponse => _onStateExitedResponse;
     }
 }

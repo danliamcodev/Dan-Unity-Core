@@ -1,6 +1,6 @@
 using UnityEditor;
 
-namespace YourCompany.Variables
+namespace SickLab.Variables
 {
     [CustomPropertyDrawer(typeof(IntReference))]
     public class IntReferenceDrawer : BaseReferenceDrawer

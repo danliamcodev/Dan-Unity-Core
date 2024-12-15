@@ -2,9 +2,9 @@ using System.IO;
 using UnityEngine;
 using UnityEditor;
 
-namespace YourCompany.Utilities.VariableReferenceScripts
+namespace SickLab.Utilities.VariableReferenceScripts
 {
-    [CreateAssetMenu(fileName = "VarRefScriptsGenerator", menuName = "Utility/Variable Reference Scripts Generator")]
+    [CreateAssetMenu(fileName = "VarRefScriptsGenerator", menuName = "Sick Lab/Utility/Variable Reference Scripts Generator")]
     public class VarRefScriptsGenerator : ScriptableObject
     {
 #if UNITY_EDITOR

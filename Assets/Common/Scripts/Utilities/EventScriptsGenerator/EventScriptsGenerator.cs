@@ -2,9 +2,9 @@ using System.IO;
 using UnityEngine;
 using UnityEditor;
 
-namespace YourCompany.Utilities.EventScripts
+namespace SickLab.Utilities.EventScripts
 {
-    [CreateAssetMenu(fileName = "Event Scripts Generator", menuName = "Utility/Event Scripts Generator")]
+    [CreateAssetMenu(fileName = "EventScriptsGenerator", menuName = "Sick Lab/Utility/Event Scripts Generator")]
     public class EventScriptsGenerator : ScriptableObject
     {
 #if UNITY_EDITOR

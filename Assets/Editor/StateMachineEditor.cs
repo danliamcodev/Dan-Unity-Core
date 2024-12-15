@@ -1,7 +1,7 @@
 using UnityEditor;
 using UnityEngine;
 
-namespace YourCompany.States
+namespace SickLab.States
 {
     [CustomEditor(typeof(GlobalStateMachine))]
     public class StateMachineEditor : Editor

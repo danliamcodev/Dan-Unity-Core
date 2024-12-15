@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 
-namespace YourCompany.Variables
+namespace SickLab.Variables
 {
     public abstract class BaseReferenceDrawer: PropertyDrawer
     {

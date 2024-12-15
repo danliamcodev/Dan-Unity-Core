@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace YourCompany.UI.Elements
+namespace SickLab.UI.Elements
 {
     public class LoadingBar : MonoBehaviour
     {

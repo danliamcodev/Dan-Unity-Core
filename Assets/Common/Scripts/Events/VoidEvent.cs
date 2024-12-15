@@ -1,9 +1,9 @@
 ﻿using UnityEngine;
 using UnityEngine.Events;
 
-namespace YourCompany.Events
+namespace SickLab.Events
 {
-    [CreateAssetMenu(fileName = "New Void Event", menuName = "Events/Void Event")]
+    [CreateAssetMenu(fileName = "VoidEvent", menuName = "Sick Lab/Events/Void Event")]
     public class VoidEvent : BaseGameEvent<Void>
     {
         public void Raise()

@@ -1,9 +1,9 @@
 ﻿using UnityEngine;
 using UnityEngine.Events;
 
-namespace YourCompany.Events
+namespace SickLab.Events
 {
-    [CreateAssetMenu(fileName = "New Float Event", menuName = "Events/Float Event")]
+    [CreateAssetMenu(fileName = "FloatEvent", menuName = "Sick Lab/Events/Float Event")]
     public class FloatEvent : BaseGameEvent<float>
     {
 

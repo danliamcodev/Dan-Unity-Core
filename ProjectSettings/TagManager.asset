@@ -8,10 +8,10 @@ TagManager:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Player
   - Water
   - UI
-  - 
+  - Ground
   - 
   - 
   - 
@@ -40,4 +40,22 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Background
+    uniqueID: 3913174697
+    locked: 0
+  - name: Player
+    uniqueID: 1654789097
+    locked: 0
+  - name: GameUI
+    uniqueID: 3295846321
+    locked: 0
+  - name: PauseUI
+    uniqueID: 560818989
+    locked: 0
+  - name: SettingsUI
+    uniqueID: 3224643851
+    locked: 0
+  - name: LoadingUI
+    uniqueID: 4283241875
     locked: 0

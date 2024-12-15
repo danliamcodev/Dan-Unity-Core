@@ -1,7 +1,7 @@
 ﻿using UnityEditor;
 using UnityEngine;
 
-namespace YourCompany.Events
+namespace SickLab.Events
 {
     public abstract class BaseEventEditor<Type, Event> : Editor where Event : BaseGameEvent<Type>
     {

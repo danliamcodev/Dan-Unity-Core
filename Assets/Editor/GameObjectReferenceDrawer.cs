@@ -1,7 +1,7 @@
 
 using UnityEditor;
 
-namespace YourCompany.Variables
+namespace SickLab.Variables
 {
     [CustomPropertyDrawer(typeof(GameObjectReference))]
     public class GameObjectReferenceDrawer : BaseReferenceDrawer

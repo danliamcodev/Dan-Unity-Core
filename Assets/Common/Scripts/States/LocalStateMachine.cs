@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace YourCompany.States
+namespace SickLab.States
 {
     public class LocalStateMachine : MonoBehaviour
     {
@@ -16,9 +16,10 @@ namespace YourCompany.States
         public void SetState(LocalState p_state)
         {
             if (_currentState == p_state) return;
-            if (_currentState != null) TriggerOnStateExited(_currentState);
+            if (_currentState != null) TriggerOnStateExited();
             _currentState = p_state;
-            TriggerOnStateEntered(_currentState);
+            TriggerOnStateEntered();
+            TriggerOnStateSet();
             return;
         }
 
@@ -27,24 +28,35 @@ namespace YourCompany.States
             _currentState = null;
         }
 
-        private void TriggerOnStateEntered(LocalState p_state)
+        private void TriggerOnStateEntered()
         {
-            if (_listeners.TryGetValue(p_state, out List<LocalStateListener> listeners))
+            if (_listeners.TryGetValue(_currentState, out List<LocalStateListener> listeners))
             {
                 foreach (LocalStateListener listener in listeners)
                 {
-                    listener.OnStateEntered(p_state);
+                    listener.OnStateEntered();
                 }
             }
         }
 
-        private void TriggerOnStateExited(LocalState p_state)
+        private void TriggerOnStateSet()
         {
-            if (_listeners.TryGetValue(p_state, out List<LocalStateListener> listeners))
+            if (_listeners.TryGetValue(_currentState, out List<LocalStateListener> listeners))
             {
                 foreach (LocalStateListener listener in listeners)
                 {
-                    listener.OnStateExited(p_state);
+                    listener.OnStateSet();
+                }
+            }
+        }
+
+        private void TriggerOnStateExited()
+        {
+            if (_listeners.TryGetValue(_currentState, out List<LocalStateListener> listeners))
+            {
+                foreach (LocalStateListener listener in listeners)
+                {
+                    listener.OnStateExited();
                 }
             }
         }
