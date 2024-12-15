@@ -25,10 +25,5 @@ namespace SickLab.Variables
         public FloatReference(float value) : base(value)
         {
         }
-
-        public static implicit operator FloatReference(float value)
-        {
-            return new FloatReference(value);
-        }
     }
 }

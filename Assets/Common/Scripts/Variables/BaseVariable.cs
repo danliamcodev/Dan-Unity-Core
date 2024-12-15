@@ -79,22 +79,24 @@ namespace SickLab.Variables
             if (_useConstant)
             {
                 _constantValue = p_value;
+                _valueUpdatedWithPrevious?.Invoke(previousValue, value);
+                _valueUpdated?.Invoke(value);
             }
             else
             {
                 _variable.SetValue(p_value);
             }
-
-            _valueUpdatedWithPrevious?.Invoke(previousValue, value);
-            _valueUpdated?.Invoke(value);
         }
 
-        public BaseReference()
-        { 
+        public void ListenToVariables()
+        {
             if (_variable != null)
             {
                 _variable.ValueUpdated.AddListener(OnVariableValueUpdated);
                 _variable.ValueUpdatedWithPrevious.AddListener(OnVariableValueUpdatedWithPrevious);
+            } else
+            {
+                Debug.LogError("No Variable Assigned");
             }
         }
 
