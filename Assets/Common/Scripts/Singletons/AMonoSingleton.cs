@@ -12,7 +12,7 @@ public abstract class AMonoSingleton<T> : MonoBehaviour where T: MonoBehaviour
         {
             if (_instance == null)
             {
-                _instance = FindObjectOfType<T>();
+                _instance = FindAnyObjectByType<T>();
 
                 if (_instance == null)
                 {

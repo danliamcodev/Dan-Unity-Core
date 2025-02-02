@@ -85,6 +85,8 @@ namespace SickLab.Variables
             else
             {
                 _variable.SetValue(p_value);
+                _valueUpdatedWithPrevious?.Invoke(previousValue, value);
+                _valueUpdated?.Invoke(value);
             }
         }
 

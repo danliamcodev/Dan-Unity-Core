@@ -6,7 +6,7 @@ using UnityEngine;
 namespace SickLab.Systems.Stats
 {
     [System.Serializable]
-    public class Stat : Property<float>
+    public class Stat : AProperty<float>
     {
         [SerializeField] StatType _type;
         public StatType type { get { return _type; } }

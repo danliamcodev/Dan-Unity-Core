@@ -5,7 +5,7 @@ using UnityEngine.Events;
 namespace SickLab.Properties
 {
     [System.Serializable]
-    public abstract class Property<T>
+    public abstract class AProperty<T>
     {
         [SerializeField] protected T _value;
         [SerializeField] protected UnityEvent<T> _onChange;
@@ -32,7 +32,7 @@ namespace SickLab.Properties
         }
 
 
-        public static implicit operator T(Property<T> property)
+        public static implicit operator T(AProperty<T> property)
         {
             return property.value;
         }

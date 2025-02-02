@@ -15,8 +15,8 @@ namespace SickLab.Systems.Movement
 
         private void Move()
         {
-            Vector2 velocity = new Vector2(_xDirection * _movementSped, _targetBody.velocity.y);
-            _targetBody.velocity = velocity;
+            Vector2 velocity = new Vector2(_xDirection * _movementSped, _targetBody.linearVelocity.y);
+            _targetBody.linearVelocity = velocity;
         }
 
         public override void Move(Vector2 p_direction)

@@ -9,8 +9,8 @@ namespace SickLab.Systems.Jump.Platformer
     {
         public override void Jump(float p_value)
         {
-            Vector2 velocity = new Vector2(_targetBody.velocity.x, p_value * _jumpForce);
-            _targetBody.velocity = velocity;
+            Vector2 velocity = new Vector2(_targetBody.linearVelocity.x, p_value * _jumpForce);
+            _targetBody.linearVelocity = velocity;
             base.Jump(p_value);
         }
 
